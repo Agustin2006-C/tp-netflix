@@ -1,0 +1,261 @@
+<!doctype html>
+<html>
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Netflix</title>
+  <script src="https://cdn.tailwindcss.com"></script> <!-- Framework -->
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body class="ml-3 bg-black">
+
+  <header class="flex items-center justify-between px-4 py-2">
+    <div class="flex items-center">
+      <img src="img/Netflix_Logo_PMS.png" alt="Logo de la empresa" class="mr-4" width="200">
+      <h1 class="text-xl font-bold"></h1>
+    </div>
+    <div class="flex items-center">
+      <div class="dropdown">
+        <button onclick=" toggleDropdown()"
+          class="mr-2 bg-black opacity-70 border border-gray-300 text-white font-semibold h-8 w-28 rounded text-md flex"
+          id="idiomaBtn">
+          <img src="img/www logo.png" alt="" class="invert ml-1 mt-1 mr-2" width="20">
+          <p class="mt-0.5">Español &triangledown;</p>
+        </button>
+        <div class="dropdown-content" id="opcionesIdioma">
+          <button class="opcion-idioma" onclick="seleccionarIdioma('es')">Español</button>
+          <button class="opcion-idioma" onclick="seleccionarIdioma('en')">Inglés</button>
+        </div>
+      </div>
+
+      <button class="mr-9 bg-red-600 hover:bg-red-700 text-white font-semibold h-8 w-28 rounded">
+        <a href="/html/login.html" class="mb-0.5 text-sm">Iniciar
+          Sesión</a>
+      </button>
+    </div>
+
+  </header>
+
+  <div>
+    <h1 class="text-6xl text-white font-bold ml-14 mt-16">Películas, series ilimitadas</h1>
+    <h1 class="text-6xl text-white font-bold ml-14">y mucho más</h1>
+    <br>
+    <p class="text-2xl text-white font-semibold ml-14">Disfruta donde quieras. Cancela cuando quieras</p>
+    <br>
+    <h3 class="text-white ml-14">¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta o reiniciar tu
+      membresía de Netflix</h3>
+    <input type="email" placeholder="    Email"
+      class="text-white ml-14 mt-3 w-1/4 py-2.5 border border-gray-400 rounded-sm bg-black opacity-70" width="56">
+    <button role="button" type="submit"
+      class="bg-red-600 text-white rounded-sm w-40 py-2.5 hover:bg-red-700 font-bold text-lg">Comenzar ></button>
+  </div>
+
+  <section class="py-8">
+
+    <div class="container mx-auto px-4">
+
+      <div class="bg-gradient-to-t from-slate-800 to-transparent"></div>
+
+    </div>
+  </section>
+
+  <section class="py-8 mt-32">
+
+    <div class="container mx-auto px-4 p-8">
+
+      <div class="grid grid-cols-4 gap-4">
+
+        <div class="p-8 bg-gray-200 rounded-lg bg-gradient-to-br from-rose-950 to-purple-950 text-white">
+
+          <img src="img/tv.png" alt="TV" width="100">
+          <h1 class="text-xl font-bold mb-2">Disfruta en tu TV</h1>
+
+          <p>Mire en televisores inteligentes, Playstation, Xbox, Chromecast, Apple TV, reproductores de Blu-ray y más
+          </p>
+        </div>
+        <div class="p-8 bg-gray-200 rounded-lg bg-gradient-to-br from-rose-950 to-purple-950 text-white">
+
+          <img src="img/popcorn.png" alt="Popcorn" width="100" class="">
+          <h3 class="text-xl font-bold mb-2">Mira en todas partes</h3>
+
+          <p class="">Transmita películas y programas de TV ilimitados en su teléfono, tableta, computadora portátil y
+            TV</p>
+        </div>
+        <div class="p-4 bg-gray-200 rounded-lg bg-gradient-to-br from-rose-950 to-purple-950 text-white">
+
+          <img src="img/crystalball.png" alt="Crystal ball" width="100">
+          <h3 class="text-xl font-bold mb-2">Crea perfiles para niños</h3>
+
+          <p>Los niños vivirán aventuras con sus personajes favoritos en un espacio diseñado exclusivamente para ellos,
+            sin costo con tu membresía</p>
+        </div>
+        <div class="p-4 bg-gray-200 rounded-lg bg-gradient-to-br from-rose-950 to-purple-950 text-white">
+
+          <img src="img/download.png" alt="Download" width="100">
+          <h3 class="text-xl font-bold mb-2">Descarga tus programas para verlos sin conexión</h3>
+
+          <p>Guarde sus favoritos fácilmente y siempre tenga algo para ver</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--FAQ-->
+  <section class="faqSection">
+    <h2 class="text-white ml-14 font-semibold text-4xl mb-4">Preguntas frecuentes</h2>
+
+    <button class="faq1 flex" onclick="toggleRespuesta('respuesta1')">
+      ¿Qué es Netflix?
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35" height="35" id="svg1">
+        <line x1="12" y1="4" x2="12" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </button>
+    <div class="respuesta" id="respuesta1">
+      Netflix es un servicio de streaming que ofrece una gran variedad de películas, series y documentales premiados en
+      casi cualquier pantalla conectada a internet.
+      Todo lo que quieras ver, sin límites ni comerciales, a un costo muy accesible. Siempre hay algo nuevo por
+      descubrir,
+      ¡y todas las semanas se agregan más películas y series!
+    </div>
+    <br>
+
+    <button class="faq2 flex" onclick="toggleRespuesta('respuesta2')">
+      ¿Cuánto cuesta Netflix?
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35" height="35" id="svg2">
+        <line x1="12" y1="4" x2="12" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </button>
+    <div class="respuesta" id="respuesta2">
+      Disfruta Netflix en tu smartphone, tablet, smart TV, laptop o dispositivo de streaming, todo por una tarifa plana
+      mensual. Planes desde $ 999 hasta $ 2.399 al mes (sin impuestos incluidos). Sin costos adicionales ni contratos.
+    </div>
+    <br>
+
+    <button class="faq3 flex" onclick="toggleRespuesta('respuesta3')">
+      ¿Dónde puedo ver Netflix?
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35" height="35" id="svg3">
+        <line x1="12" y1="4" x2="12" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </button>
+    <div class="respuesta" id="respuesta3">
+      Disfruta donde quieras, cuando quieras. Inicia sesión en tu cuenta de Netflix para ver contenido al instante a
+      través de netflix.com desde tu computadora personal o en cualquier dispositivo con conexión a internet que cuente
+      con la app de Netflix, como smart TV, smartphones, tablets, reproductores multimedia y consolas de juegos.
+
+      Además, puedes descargar tus series favoritas con iOS, Android o la app para Windows 10. Con la función de
+      descarga,
+      puedes ver donde vayas y sin conexión a internet. Lleva Netflix contigo adonde sea.
+    </div>
+    <br>
+
+    <button class="faq4 flex" onclick="toggleRespuesta('respuesta4')">
+      ¿Cómo cancelo?
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35" height="35" id="svg4">
+        <line x1="12" y1="4" x2="12" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </button>
+    <div class="respuesta" id="respuesta4">
+      Netflix es flexible. Sin contratos molestos ni compromisos. Cancela la membresía online con solo dos clics. No hay
+      cargos por cancelación. Empieza y termina cuando quieras.
+    </div>
+    <br>
+
+    <button class="faq5 flex" onclick="toggleRespuesta('respuesta5')">
+      ¿Qué puedo ver en Netflix?
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35" height="35" id="svg5">
+        <line x1="12" y1="4" x2="12" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </button>
+    <div class="respuesta" id="respuesta5">
+      Netflix tiene un amplio catálogo de películas, series, documentales, animes, originales premiados y más. Todo lo
+      que
+      quieras ver, cuando quieras.
+    </div>
+    <br>
+
+    <button class="faq6 flex" onclick="toggleRespuesta('respuesta6')">
+      ¿Es bueno Netflix para los niños?
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35" height="35" id="svg6">
+        <line x1="12" y1="4" x2="12" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </button>
+    <div class="respuesta" id="respuesta6">
+      La experiencia de Netflix para niños está incluida en la membresía para que los padres tengan el control mientras
+      los peques disfrutan series y películas familiares en su propio espacio.
+
+      Los perfiles para niños incluyen controles parentales protegidos por PIN que te permiten restringir el contenido
+      que
+      pueden ver los niños en función de la clasificación por edad y bloquear determinados títulos que no quieras que
+      los
+      niños vean.
+    </div>
+
+  </section>
+
+  <h2 class="text-white text-lg font-semibold ml-14 mt-6">¿Quieres ver Netflix ya? Ingresa tu email para crear una
+    cuenta o reiniciar tu membresía de Netflix.</h2>
+
+  <input type="email" placeholder="  Email"
+    class="text-white ml-14 mt-3 w-1/4 py-2.5 border border-gray-400 rounded-sm bg-black opacity-70" width="56">
+
+  <button role="button" type="submit"
+    class="bg-red-600 text-white rounded-sm w-40 py-2.5 hover:bg-red-700 font-bold text-lg">Comenzar ></button>
+
+    <footer class="ml-14 mt-32 text-white">
+
+      <div class="flex">
+        <p class="mr-1">¿Preguntas? Llama al</p>
+        <a href="#" class="underline underline-offset-1">0800 345 1593</a>
+    
+      </div>
+    
+      <div class="mt-8 underline underline-offset-1">
+    
+        <div class="grid grid-cols-4 gap-4">
+    
+          <div><a href="#">Preguntas frecuentes</a></div>
+          <div><a href="#">Centro de ayuda</a></div>
+          <div><a href="#">Cuenta</a></div>
+          <div><a href="#">Prensa</a></div>
+        </div>
+    
+        <div class="grid grid-cols-4 gap-4">
+    
+          <div><a href="#">Relaciones con inversionistas</a></div>
+          <div><a href="#">Empleo</a></div>
+          <div><a href="#">Formas de ver</a></div>
+          <div><a href="#">Términos de uso</a></div>
+        </div>
+    
+        <div class="grid grid-cols-4 gap-4">
+    
+          <div><a href="#">Privacidad</a></div>
+          <div><a href="#">Preferencia de cookies</a></div>
+          <div><a href="#">Información corporativa</a></div>
+          <div><a href="#">Contáctanos</a>
+          </div>
+    
+          <div class="grid grid-cols-3 gap-3">
+    
+            <div><a href="#">Prueba de velocidad</a></div>
+            <div class="ml-[310px]"><a href="#">Avisos legales</a></div>
+            <div class="ml-[620px]"><a href="#">Solo en Netflix</a></div>
+          </div>
+        </div>
+    </footer>
+    
+    <script src="/js/script.js"></script>
+
+
+  </body>
+
+</html>

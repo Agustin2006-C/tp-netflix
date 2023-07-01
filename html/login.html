@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Netflix</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+
+</head>
+
+<body class="ml-3">
+
+    <header class="flex items-center justify-between px-4 py-2">
+
+        <div class="flex items-center">
+
+            <img src="../img/Netflix_Logo_PMS.png" alt="Logo de la empresa" class="mr-4" width="200">
+
+            <h1 class="text-xl font-bold"></h1>
+
+        </div>
+        <script>
+
+            function toggleDropdown() {
+                var opcionesIdioma = document.getElementById("opcionesIdioma");
+                opcionesIdioma.style.display = opcionesIdioma.style.display === "none" ? "block" : "none";
+            }
+
+
+            var idiomaBtn = document.getElementById("idiomaBtn");
+            idiomaBtn.addEventListener("click", toggleDropdown);
+        </script>
+    </header>
+
+    <h1 class="text-left mb-[20px] mx-[80px] text-[35px] font-semibold text-white">Inicia Sesión</h1>
+
+    <section>
+        <form action="" id="myForm" class="text-white grid grid-cols-1 mx-[80px]">
+
+            <input type="email" placeholder="Email o número de teléfono" name="email"
+                class="mb-[15px] py-[15px] px-[20px] bg-[#333333] rounded-[5px]">
+
+            <input type="password" placeholder="Contraseña" name="pass"
+                class="mb-[40px] py-[15px] px-[20px] bg-[#333333] rounded-[5px]">
+
+            <input type="submit" name="submit" value="Iniciar Sesión"
+            class="mb-[40px] py-[15px] px-[20px] bg-red-600 rounded-[5px] text-white">
+        </form>
+        <div class="mx-[80px] text-[13px] flex text-[#b3b3b3]">
+
+            <input type="checkbox" class="mr-[5px] rounded-[10px] justify-start">Recuerdame
+
+            <a href="" class="ml-[140px] hover:underline underline-offset-[2px]">Necesitas ayuda?</a>
+
+        </div>
+    </section>
+
+    <section class="mx-[88px] mt-[80px] mb-[140px] text-[#797f81]">
+
+        <h1 class="text-[16px] mb-[10px]">¿Primera vez en Netflix? <b>
+
+                <a href="" class="hover:underline underline-offset-[2px] text-white">Suscríbete ahora.</a>
+
+            </b>
+        </h1>
+        <p class="text-[14px]">Esta página está protegida por Google reCAPTCHA para comprobar que no eres un robot.
+
+            <a href="" class="text-[#0165eb] hover:underline underline-offset-[2px]">Más info.</a>
+
+        </p>
+    </section>
+    </main>
+</body>
+<footer class="bg-black bg-opacity-[0.7] mt-[90px] text-[#797f81] translate-x-[-12px] pt-[10px] pb-[20px]">
+
+    <section class="ml-[200px]">
+
+        <h1 class="mx-[200px]">¿Preguntas? Llama al
+
+            <a href="#" class="hover:underline underline-offset-[1px]">0800 3451593</a>
+
+        </h1>
+        <div class="mt-[32px] mx-[200px] underline underline-offset-[1px]">
+
+            <div class="grid grid-cols-4">
+
+                <div><a href="#">Preguntas frecuentes</a></div>
+                <div><a href="#">Centro de ayuda</a></div>
+                <div><a href="#">Terminos de uso</a></div>
+                <div><a href="#">Privacidad</a></div>
+                <div><a href="#">Preferencias de cookies</a></div>
+                <div><a href="#">Información corporativa</a></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mx-[400px] mt-[30px] mb-[40px]">
+
+        <select class="bg-black opacity-[0.7] border-[1px] border-white py-[10px] px-[15px]" id="language-select">
+
+            <option value="es" class="opacity-[1]">Español</option>
+
+            <option value="en" class="opacity-[1]">Inglés</option>
+
+        </select>
+    </section>
+</footer>
+<script src="/js/script.js"></script>
+
+</html>
